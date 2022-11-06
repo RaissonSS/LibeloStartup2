@@ -1,0 +1,67 @@
+@import "../common.scss";
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "header header header header header header"
+                         "bar    cont   cont   cont   cont   cont";
+    grid-template-rows: min-content;
+    min-height: 100vh;
+    border: 1px black solid;
+
+    header {
+        grid-area: header;
+        border: 1px red solid;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 6vh;
+
+        /*h1 {
+            // pass
+        }*/
+    }
+
+    .bar {
+        grid-area: bar;
+        border: 1px green solid;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-top: 15px;
+
+        .img-border {
+            display: flex;
+            img {
+                width: 60%;
+                align-self: center;
+            }
+        }
+        
+
+        /*.drawer {
+            #certificates {
+
+            }
+        }*/
+    }
+
+    .main-content {
+        grid-area: cont;
+        border: 1px blue solid;
+        /*.cert01 {
+
+        }
+
+        .cert02 {
+
+        }
+
+        .cert03 {
+
+        }*/
+    }
+}
+
+@import "../responsivity/libeloPageRES.scss";
